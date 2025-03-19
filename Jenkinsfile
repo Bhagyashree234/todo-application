@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/Bhagyashree234/todo-application.git'
+                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/Bhagyashree234/todo-application.git'
             }
         }
         stage('Build') {

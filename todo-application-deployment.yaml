@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: todo-application
-          image: <docker hub username>/todo-application:latest # Replace with your Docker hub repository name and tag
+          image: bhagyashreeparhad/todo-application:latest # Replace with your Docker hub repository name and tag
           ports:
             - containerPort: 8081
           env:
@@ -44,3 +44,10 @@ spec:
       targetPort: 8081
       nodePort: 30080
   type: NodePort # Expose the application externally
+  # selector:
+  #   app: odo-application
+  # ports:
+  #   - protocol: TCP
+  #     port: 80
+  #     targetPort: 80
+  #     nodePort: 30080
