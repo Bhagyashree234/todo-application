@@ -29,8 +29,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker compose down --remove-orphans'
-                sh 'docker rm -f mysql-db || true'
-                sh 'docker compose up -d'
+               // sh 'docker rm -f mysql-db || true'
+              //  sh 'docker compose up -d'
             }
         }
         stage('cleanup') {
